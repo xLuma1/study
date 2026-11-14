@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tutor – Language Journal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="tutor">
+<div class="apps">
+  <aside class="sidebar" id="side"></aside>
+  <main class="main-content">
+    <h1>AI Tutor</h1>
+    <h2>Feedback, grammar, stories and new words in <span class="lang-label"></span></h2>
+    <p>Your tutor adapts to the language and level you choose.</p>
+
+    <details class="studio-box" id="settings">
+      <summary>Settings</summary>
+      <p class="muted">Paste your own Anthropic API key. It stays in this browser and is sent only to Anthropic. Use a key with a spending limit.</p>
+      <input type="password" id="ai-key" placeholder="sk-ant-…" autocomplete="off">
+      <div class="opts-row">
+        <label>Level <select id="ai-level"><option>A1</option><option>A2</option><option>B1</option><option>B2</option><option>C1</option><option>C2</option></select></label>
+        <label>Model <input type="text" id="ai-model" style="padding:6px 10px;font-size:14px"></label>
+      </div>
+      <div class="studio-actions"><span class="muted" id="ai-saved"></span><span><button type="button" class="ghost" id="ai-clear">Remove key</button> <button type="button" id="ai-save">Save settings</button></span></div>
+    </details>
+
+    <div class="tabs" style="margin-top:20px">
+      <button type="button" class="tab active" data-pane="fb">Feedback</button>
+      <button type="button" class="tab" data-pane="gr">Grammar</button>
+      <button type="button" class="tab" data-pane="st">Stories</button>
+      <button type="button" class="tab" data-pane="nw">New words</button>
+    </div>
+
+    <section class="studio-box pane" id="pane-fb">
+      <div class="prompt-bar"><span>Paste or write a text in <span class="lang-label"></span></span></div>
+      <textarea id="fb-in" placeholder="Your text here. You can also open any saved entry with 🤖 Feedback."></textarea>
+      <div class="studio-actions"><span class="muted">Corrections, explanations and words worth learning</span><button type="button" id="fb-go">Get feedback</button></div>
+      <div id="fb-out"></div>
+    </section>
+
+    <section class="studio-box pane" id="pane-gr" hidden>
+      <div class="prompt-bar"><span>Learn one grammar point, then practise it</span></div>
+      <input type="text" id="gr-topic" placeholder="Topic, e.g. past tense (leave empty for a suggestion)">
+      <div class="studio-actions"><span></span><button type="button" id="gr-go">Teach me</button></div>
+      <div id="gr-out"></div>
+    </section>
+
+    <section class="studio-box pane" id="pane-st" hidden>
+      <div class="prompt-bar"><span>A story at your level, with your own words woven in</span></div>
+      <input type="text" id="st-topic" placeholder="Topic (optional), e.g. a lost cat in Lisbon">
+      <div class="studio-actions"><label class="muted">Length <select id="st-len"><option value="100">Short</option><option value="200" selected>Medium</option><option value="350">Long</option></select></label><button type="button" id="st-go">Write story</button></div>
+      <div id="st-out"></div>
+    </section>
+
+    <section class="studio-box pane" id="pane-nw" hidden>
+      <div class="prompt-bar"><span>New words, skipping the ones you already have</span></div>
+      <input type="text" id="nw-theme" placeholder="Theme, e.g. cooking, travel, feelings (optional)">
+      <div class="studio-actions"><label class="muted">How many <select id="nw-n"><option>8</option><option selected>12</option><option>20</option></select></label><button type="button" id="nw-go">Suggest words</button></div>
+      <div id="nw-out"></div>
+    </section>
+  </main>
+</div>
+<script src="app.js"></script>
+<script src="tutor.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress – Language Journal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="progress">
+<div class="apps">
+  <aside class="sidebar" id="side"></aside>
+  <main class="main-content">
+    <h1>Progress</h1>
+    <h2>Look how far you've gotten</h2>
+    <p>Watch your progress and look for patterns</p>
+    <div class="stats" id="stats"></div>
+    <div class="studio-box"><div class="prompt-bar"><span id="lvl-title">By level</span></div><div id="levels" style="display:flex;flex-direction:column;gap:8px"></div></div>
+    <div class="studio-box"><div class="prompt-bar"><span>Last 14 days</span></div><div class="chart" id="chart"></div><div class="legend"><span style="color:#07f9d7">■</span> reviews &nbsp; <span style="color:#ffd700">■</span> words written</div></div>
+    <div class="studio-box"><div class="prompt-bar"><span>Words per language</span></div><div id="per-lang" style="display:flex;flex-direction:column;gap:8px"></div></div>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

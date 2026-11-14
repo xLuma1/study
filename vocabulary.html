@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vocabulary – Language Journal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="vocabulary">
+<div class="apps">
+  <aside class="sidebar" id="side"></aside>
+  <main class="main-content">
+    <h1>Vocabulary</h1>
+    <h2>Your personal word bank</h2>
+    <p>Collect new words in <b id="lang-name"></b> and practise them your way. No schedule, no pressure.</p>
+    <div class="studio-box" id="quiz-box">
+      <div class="prompt-bar"><span>Practice Mode</span><span id="quiz-level"></span></div>
+      <div class="tabs">
+        <button type="button" class="tab active" data-mode="cards">Flashcards</button>
+        <button type="button" class="tab" data-mode="type">Type it</button>
+        <button type="button" class="tab" data-mode="choice">Multiple choice</button>
+      </div>
+      <div class="opts-row">
+        <label>Direction <select id="dir"><option value="mixed">Mixed</option><option value="front">Word → meaning</option><option value="back">Meaning → word</option></select></label>
+        <label><input type="checkbox" id="weak"> Focus on weaker words</label>
+      </div>
+      <h3 id="quiz-word"></h3>
+      <div id="q-area"></div>
+      <span id="quiz-feedback"></span>
+    </div>
+    <div class="studio-box" id="add-box">
+      <div class="prompt-bar"><span id="prompt-text">Add new vocabs</span><span style="color:#07f9d7">+</span></div>
+      <input type="text" id="translation" placeholder="Word or phrase">
+      <input type="text" id="back" placeholder="Meaning (use / for alternatives)">
+      <input type="text" id="example" placeholder="Example sentence (optional)">
+      <div class="studio-actions"><span id="word-count">0 vocabs</span><button type="button" id="save-btn">Save Vocab</button></div>
+      <details><summary class="muted">Bulk add &amp; export</summary>
+        <p class="muted">One per line: word ; meaning ; example (optional)</p>
+        <textarea class="bulk" id="bulk" placeholder="la manzana ; the apple ; Me gusta la manzana."></textarea>
+        <div class="studio-actions" style="margin-top:10px"><button type="button" class="ghost" id="export">Export CSV</button><button type="button" id="bulk-btn">Add all</button></div>
+      </details>
+    </div>
+    <div class="saved-section">
+      <h3>Saved Vocabs</h3>
+      <input type="text" id="search" placeholder="Search your words…">
+      <div id="saved-list"></div>
+    </div>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

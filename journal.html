@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal – Language Journal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="journal">
+<div class="apps">
+  <aside class="sidebar" id="side"></aside>
+  <main class="main-content">
+    <h1>Journal</h1>
+    <h2>JUST BE CREATIVE</h2>
+    <p>Create from what you've learned</p>
+    <div class="studio-box">
+      <div class="prompt-bar">
+        <span id="prompt-text">Write about your day</span>
+        <button type="button" id="new-prompt-btn">New Prompt</button>
+      </div>
+      <div class="chips" id="chips"></div>
+      <textarea id="story-editor" placeholder="Write in the language you are learning. Mistakes are welcome."></textarea>
+      <div class="studio-actions">
+        <span id="word-count">0 words</span>
+        <span><button type="button" class="ghost" id="sel-vocab" title="Save the selected text as a vocab">+ Vocab from selection</button> <button type="button" id="save-btn">Save</button></span>
+      </div>
+    </div>
+    <div class="saved-section">
+      <h3>Your entries</h3>
+      <div id="saved-list"></div>
+    </div>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

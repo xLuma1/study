@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Studio – Language Journal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="creative-studio">
+<div class="apps">
+  <aside class="sidebar" id="side"></aside>
+  <main class="main-content">
+    <h1>Creative-studio</h1>
+    <h2>Write-Create-Consume</h2>
+    <p>Nothing needs to be explained. You'll get this!</p>
+    <div class="studio-box">
+      <div class="prompt-bar">
+        <span id="prompt-text">Write about yourself</span>
+        <button type="button" id="new-prompt-btn">New Prompt</button>
+      </div>
+      <input type="text" id="story-title" placeholder="Title of your piece...">
+      <div class="chips" id="chips"></div>
+      <textarea id="story-editor" placeholder="Start writing your story, poem, or thoughts here..."></textarea>
+      <div class="studio-actions">
+        <span id="word-count">0 words</span>
+        <span><button type="button" class="ghost" id="sel-vocab" title="Save the selected text as a vocab">+ Vocab from selection</button> <button type="button" id="save-btn">Save</button></span>
+      </div>
+    </div>
+    <div class="saved-section">
+      <h3>Saved Creations</h3>
+      <div id="saved-list"></div>
+    </div>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

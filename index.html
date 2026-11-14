@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard – Language Journal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="index">
+<div class="apps">
+  <aside class="sidebar" id="side"></aside>
+  <main class="main-content">
+    <h1>Language Journal</h1>
+    <h2>DO WHAT U WANT &lt;3</h2>
+    <p>write. create. be yourself</p>
+    <p>You love input, but don't always trust in yourself? That's my plan for YOU!</p>
+    <p>Output &gt; Input. We can rule this world together:)</p>
+    <div class="stats" id="stats"></div>
+    <div class="studio-box"><div class="prompt-bar"><span>Today</span></div><div id="goals" style="display:flex;flex-direction:column;gap:10px"></div></div>
+    <div class="studio-box"><div class="prompt-bar"><span>Word of the day</span></div><div id="wotd"></div></div>
+    <div class="studio-box"><div class="prompt-bar"><span>Think in your language</span></div><div id="nudge"></div></div>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
+```[cite: 10]
+
+---
+
+### 2. Sprach-Filter & Daten-Check
+* **Sprache wählen:** Schau unten in der Sidebar im Dropdown **„I'm learning“** nach, ob dort exakt die Sprache eingestellt ist, für die du Vokabeln oder Texte angelegt hast. Da das System (`app.js`) über `mine()` nur Einträge der aktuell aktiven Sprache anzeigt[cite: 12], greift das Dashboard sonst ins Leere.
+* **Erste Aktivität erzeugen:** Damit das Dashboard und die **Progress-Seite** nicht leer bleiben:
+  1. Gehe in den Bereich **Vocabulary**, füge ein paar Vokabeln hinzu und spiele eine kurze Quiz-Runde (das füttert die Review-Statistiken über `bump("reviews")`)[cite: 12].
+  2. Schreibe im **Journal** oder **Creative Studio** einen kurzen Text und speichere ihn (das füttert die Wort-Statistiken über `bump("words")`)[cite: 12].
+
+Sobald du die Datei umbenannt und einmal kurz durchgeklickt hast, greifen alle Grafiken, Streaks und Fortschrittsbalken perfekt ineinander!
